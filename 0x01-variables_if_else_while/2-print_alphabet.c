@@ -1,37 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Prints numbers between 00 to 89.
- * Description: printing numbers from 00 to 89 in c programming
+ * main - printing alphabet followed by a new line
+ * Description: alphabet in lowercase
  * Return: 0
  */
 int main(void)
 {
-	int i, e;
+	char a = 'a';
 
-	i = 48;
-	e = 48;
-
-	while (e < 58)
+	while (a <= 'z')
 	{
-		i = 48;
-		while (i < 58)
-		{
-			if (e != i && e < i)
-			{
-				putchar(e);
-				putchar(i);
-				if (i == 57 && e == 56)
-				{
-					break;
-				}
-				putchar(',');
-				putchar(' ');
-			}
-			i++;
-		}
-		e++;
+		putchar(a);
+		a++;
 	}
+
 	putchar('\n');
 	return (0);
 }
