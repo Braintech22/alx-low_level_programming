@@ -1,21 +1,35 @@
 #include "main.h"
+
 /**
- * puts2 - prints every other character of a string
- * @str: the string to print
- *
+ *rev_string - Entry point
+ *@s: pointer the string we want to change
+ *Return: no return
  */
-void puts2(char *str)
+void rev_string(char *s)
 {
 	int i;
 	int j;
+	char gua[1000];
 
-	for (i = 0 ; str[i] != '\0' ; i++)
+	i = 0;
+	while (*(s + i) != '\0')
 	{
-		;
+		i++;
 	}
-	for (j = 0 ; j < i ; j = j + 2)
+
+	j = 0;
+	while (*(s + j) != '\0')
 	{
-		_putchar(str[j]);
+
+		gua[j] = *(s + j);
+		j++;
 	}
-	_putchar('\n');
+
+	j = 0;
+	while (i >= 0)
+	{
+		s[j] = gua[i - 1];
+		i--;
+		j++;
+	}
 }
