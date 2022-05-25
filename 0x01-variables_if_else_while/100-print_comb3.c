@@ -1,37 +1,41 @@
 #include <stdio.h>
-
 /**
- * main - Prints numbers between 00 to 89.
- * Description: printing numbers from 00 to 89 in c programming
- * Return: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success/completed)
  */
 int main(void)
+
 {
-	int i, e;
+int number_left;
+int number_right;
 
-	i = 48;
-	e = 48;
 
-	while (e < 58)
-	{
-		i = 48;
-		while (i < 58)
-		{
-			if (e != i && e < i)
-			{
-				putchar(e);
-				putchar(i);
-				if (i == 57 && e == 56)
-				{
-					break;
-				}
-				putchar(',');
-				putchar(' ');
-			}
-			i++;
-		}
-		e++;
-	}
-	putchar('\n');
-	return (0);
+for (number_left = 48; number_right <= 78; number_left++)
+{
+for (number_right = number_left + 1 ; number_right <= 78; number_right++)
+{
+
+putchar(number_left);
+putchar (number_right);
+
+
+if ((number_left == 56) && (number_right == 78))
+{
+break;
+}
+
+putchar(',');
+putchar (' ');
+
+}
+
+}
+
+putchar('\n');
+
+
+return (0);
+
+
 }

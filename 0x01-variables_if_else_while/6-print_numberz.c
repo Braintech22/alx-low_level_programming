@@ -1,20 +1,21 @@
 #include <stdio.h>
-
 /**
- * main - prints int
- * Description: n.o are under 10 without using any char vars
- *Return: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (success/corect)
  */
 int main(void)
+
 {
-	int x = 48;
+int i;
 
-	while (x < 58)
-	{
-		putchar(x);
-		x++;
-	}
+for (i = 48 ; i <= 57; i++)
+{
+putchar (i);
+}
 
-	putchar('\n');
-	return (0);
+putchar ('\n');
+
+return (0);
+
 }

@@ -1,20 +1,25 @@
 #include <stdio.h>
-
 /**
- * main - prints numbers
- * Description: numbers of base 16 are in lowercase
- * Return: 0
+ * main - entry point
+ *
+ * Return: Always 0 (success/correct)
  */
 int main(void)
+
 {
-	int x;
+char base_16;
 
-	for (x = 48; x < 58; x++)
-		putchar(x);
+for (base_16 = 48; base_16 <= 57; base_16++)
+{putchar(base_16);
+}
 
-	for (x = 'a'; x <= 'f'; x++)
-		putchar(x);
+for (base_16 = 97 ; base_16 <= 102; base_16++)
+{
+putchar(base_16);
+}
 
-	putchar('\n');
-	return (0);
+putchar ('\n');
+
+return (0);
+
 }

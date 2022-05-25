@@ -1,28 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 #include <time.h>
-
+#include <stdio.h>
 /**
-* main - Entry point
-* Return: return 0
-*/
+ */
 int main(void)
- {
-	 int contador;
-	 int  checksum;
-	 int  aleatorio;
+{
+int num;
 
-	srand(time(NULL));
-	checksum = 2772;
-	contador = 0;
-
-	while (checksum > 122)
-	{
-		aleatorio = (rand() % 100);
-		printf("%c", aleatorio);
-		checksum -= aleatorio;
-		contador++;
-	}
-	printf("%c", checksum);
-        return 0;
- }
+srand(time(0));
+num = rand();
+printf("%i\n", num);
+return (0);
+}
