@@ -1,16 +1,21 @@
 #include <stdio.h>
 /**
- * main - prints integers
- * Description: all int are under 10
- * Return: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (success/correct)
  */
 int main(void)
+
 {
-	int a;
+int i;
 
-	for (a = 0; a < 10; a++)
-		printf("%d", a);
+for (i = 0 ; i < 10; i++)
+{
+printf("%i", i);
+}
 
-	printf("\n");
-	return (0);
+printf("\n");
+
+return (0);
+
 }

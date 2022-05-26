@@ -1,22 +1,30 @@
 #include <stdio.h>
 /**
- * main - prints numbers
- * Description: numbers under 10 with a
- * Return: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success/correct)
  */
 int main(void)
-{
-	int a;
 
-	for (a = 48; a < 58; a++)
-	{
-		putchar(a);
-		if (a != 57)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	}
-	putchar('\n');
-	return (0);
+{
+int number;
+
+
+for (number = 48; number <= 57; number++)
+{
+putchar(number);
+
+if (number == 57)
+{
+break;
+}
+
+putchar(',');
+putchar (' ');
+}
+
+putchar('\n');
+
+return (0);
+
 }

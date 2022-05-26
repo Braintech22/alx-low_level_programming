@@ -1,35 +1,44 @@
 #include "main.h"
-
 /**
- *rev_string - Entry point
- *@s: pointer the string we want to change
- *Return: no return
+ * rev_string - prints a reverse string
+ *@s: A pointer to an int that will be changed
+ *
+ *Return: void
  */
+
 void rev_string(char *s)
 {
-	int i;
-	int j;
-	char gua[1000];
+char *start_c, *end_c, c;
+int i, count;
+int length = 0;
 
-	i = 0;
-	while (*(s + i) != '\0')
-	{
-		i++;
-	}
+for (i = 0; s[i]; i++)
+{
+length++;
+}
 
-	j = 0;
-	while (*(s + j) != '\0')
-	{
+count = length;
 
-		gua[j] = *(s + j);
-		j++;
-	}
+start_c = s;
+end_c = s;
 
-	j = 0;
-	while (i >= 0)
-	{
-		s[j] = gua[i - 1];
-		i--;
-		j++;
-	}
+
+for (i = 0; i < count - 1; i++)
+{
+end_c++;
+}
+
+
+for (i = 0; i < count / 2; i++)
+{
+
+
+c = *end_c;
+*end_c = *start_c;
+*start_c = c;
+
+
+start_c++;
+end_c--;
+}
 }

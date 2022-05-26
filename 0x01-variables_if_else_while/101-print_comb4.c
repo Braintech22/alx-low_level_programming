@@ -1,47 +1,46 @@
 #include <stdio.h>
 /**
- * main - Prints numbers between 012 to 789.
- * Return: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success/correct)
  */
 int main(void)
+
 {
-	int i, e, g;
+int left;
+int right;
+int center;
 
-	i = 48;
-	e = 48;
-	g = 48;
 
-	while (e < 58)
-	{
-		i = 48;
-		while (i < 58)
 
-		{
-			g = 48;
-			while (g < 58)
-			{
-				if (e != i && e != g && i != g && e < i && i < g)
-				{
-					putchar(e);
-					putchar(i);
-					putchar(g);
-					if (i == 56 && e == 55 && g == 57)
-					{
-						break;
-					}
-					putchar(',');
-					putchar(' ');
-				}
-				g++;
+for (left = 48; left <= 57; left++)
+{
+for (center = left + 1; center <= 57; center++)
+{
+for (right = center + 1 ; right <= 57; right++)
 
-			}
-			i++;
 
-		}
-		e++;
+{
+putchar(left);
+putchar (center);
+putchar (right);
 
-	}
-	putchar('\n');
-	return (0);
+if  ((left == 55) && (center == left + 1) && (right == center + 1))
+{
+break;
 }
 
+putchar(',');
+putchar (' ');
+
+}
+
+}
+
+}
+
+putchar('\n');
+
+return (0);
+
+}
